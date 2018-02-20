@@ -11,8 +11,10 @@
 		<div class="container" id="menu1"> |
 			<c:forEach items="${navMenuFun.entries}" var="menuItem">
 				<nav:isBranch id="currentBranchCheck" branchUrl="${menuItem.url}" checkUrl="${CurrentNavData.entry.url}"/>
+				<nav:auth id="authCheck" url="${menuItem.url}" />
 				<span class="menu1item">
 					<c:choose>
+						<c:when test="${authCheck ne '0'}"><i><bean:message key="${menuItem.label}"  bundle="menu"/></i></c:when>
 						<c:when test="${currentBranchCheck}"><bean:message key="${menuItem.label}"  bundle="menu"/></c:when>
 						<c:otherwise>
 							<a class="menu1link" href="${menuItem.url}"><bean:message key="${menuItem.label}"  bundle="menu"/></a>

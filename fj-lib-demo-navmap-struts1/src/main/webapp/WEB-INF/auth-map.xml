@@ -1,0 +1,46 @@
+<auth-map>
+
+	<!-- 
+		profile id 'admin', access to all
+		profile id 'profile_1', access to page_1_* only
+		profile id 'profile_2', access to page_2_* only
+		profile id 'profile_3', access to page_3_* only
+	 -->
+	
+	<auth-list id="profile_1">
+		<auth id="page_1"/>
+		<auth id="page_1_1"/>
+		<auth id="page_1_2"/>
+		<auth id="page_1_3"/>
+	</auth-list>
+
+	<auth-list id="profile_2">
+		<auth id="page_2"/>
+		<auth id="page_2_1"/>
+		<auth id="page_2_2"/>
+		<auth id="page_2_3"/>
+	</auth-list>
+	
+	<auth-list id="profile_3">
+		<auth id="page_3"/>
+		<auth id="page_3_1"/>
+		<auth id="page_3_2"/>
+		<auth id="page_3_3"/>
+	</auth-list>
+	
+	<auth-list id="admin">
+		<auth id="page_1"/>
+		<auth id="page_2"/>
+		<auth id="page_3"/>
+		<auth id="page_1_1"/>
+		<auth id="page_1_2"/>
+		<auth id="page_1_3"/>
+		<auth id="page_2_1"/>
+		<auth id="page_2_2"/>
+		<auth id="page_2_3"/>		
+		<auth id="page_3_1"/>
+		<auth id="page_3_2"/>
+		<auth id="page_3_3"/>		
+	</auth-list>			
+
+</auth-map>

@@ -6,6 +6,7 @@
 <%@ taglib uri="/fugerit/navmap" prefix="nav"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
+<nav:entry url="/WEB-INF/jsp/common/include/error.jsp" setCurrentEntry="1" id="errorEntry" toScope="page" />
 <tiles:insert page="/WEB-INF/jsp/common/template.jsp" flush="true">
 	<tiles:put name="content" value="/WEB-INF/jsp/common/include/error.jsp" />
 </tiles:insert>

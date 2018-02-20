@@ -2,7 +2,8 @@
 
 <nav-map xmlns="http://www.fugerit.org/fj-core/navmap" 
 	schemaLocation="http://www.fugerit.org/fj-core/navmap http://www.fugerit.org/res/fj-core/navmap/navmap-1-0.xsd" 
-	auth-handler="org.fugerit.java.core.web.auth.handler.BasicAuthHandler">
+	auth-handler="org.fugerit.java.demo.navmap.config.CustomAuthHandler"
+	auth-map="/WEB-INF/auth-map.xml">
 
 	<nav-menu-list>
 	
@@ -12,6 +13,9 @@
 			<menu-item url="/home/page_2.do"/>
 			<menu-item url="/home/page_3.do"/>
 		</nav-menu>
+		
+		<nav-menu id="main-empty">
+		</nav-menu>		
 		
 		<nav-menu id="main-sec-home">
 		</nav-menu>		
@@ -40,21 +44,25 @@
 	
 		<!-- sezione home -->
 		<nav-entry url="/home/index.do" auth="allow" label="menu.home.index" menu1="main-menu" menu2="main-sec-home">
-			<nav-entry url="/home/page_1.do" auth="allow" label="menu.home.page_1" menu1="main-menu" menu2="main-sec-page_1">
-				<nav-entry url="/home/page_1_1.do" auth="allow" label="menu.home.page_1_1" menu1="main-menu" menu2="main-sec-page_1"/>
-				<nav-entry url="/home/page_1_2.do" auth="allow" label="menu.home.page_1_2" menu1="main-menu" menu2="main-sec-page_1"/>
-				<nav-entry url="/home/page_1_3.do" auth="allow" label="menu.home.page_1_3" menu1="main-menu" menu2="main-sec-page_1"/>
+		
+			<nav-entry url="/home/page_1.do" auth="page_1" label="menu.home.page_1" menu1="main-menu" menu2="main-sec-page_1">
+				<nav-entry url="/home/page_1_1.do" auth="page_1_1" label="menu.home.page_1_1" menu1="main-menu" menu2="main-sec-page_1"/>
+				<nav-entry url="/home/page_1_2.do" auth="page_1_2" label="menu.home.page_1_2" menu1="main-menu" menu2="main-sec-page_1"/>
+				<nav-entry url="/home/page_1_3.do" auth="page_1_3" label="menu.home.page_1_3" menu1="main-menu" menu2="main-sec-page_1"/>
 			</nav-entry>	
-			<nav-entry url="/home/page_2.do" auth="allow" label="menu.home.page_2" menu1="main-menu" menu2="main-sec-page_2">
-				<nav-entry url="/home/page_2_1.do" auth="allow" label="menu.home.page_2_1" menu1="main-menu" menu2="main-sec-page_2"/>
-				<nav-entry url="/home/page_2_2.do" auth="allow" label="menu.home.page_2_2" menu1="main-menu" menu2="main-sec-page_2"/>
-				<nav-entry url="/home/page_2_3.do" auth="allow" label="menu.home.page_2_3" menu1="main-menu" menu2="main-sec-page_2"/>
+			<nav-entry url="/home/page_2.do" auth="page_2" label="menu.home.page_2" menu1="main-menu" menu2="main-sec-page_2">
+				<nav-entry url="/home/page_2_1.do" auth="page_2_1" label="menu.home.page_2_1" menu1="main-menu" menu2="main-sec-page_2"/>
+				<nav-entry url="/home/page_2_2.do" auth="page_2_2" label="menu.home.page_2_2" menu1="main-menu" menu2="main-sec-page_2"/>
+				<nav-entry url="/home/page_2_3.do" auth="page_2_3" label="menu.home.page_2_3" menu1="main-menu" menu2="main-sec-page_2"/>
 			</nav-entry>		
-			<nav-entry url="/home/page_3.do" auth="allow" label="menu.home.page_3" menu1="main-menu" menu2="main-sec-page_3">
-				<nav-entry url="/home/page_3_1.do" auth="allow" label="menu.home.page_3_1" menu1="main-menu" menu2="main-sec-page_3"/>
-				<nav-entry url="/home/page_3_2.do" auth="allow" label="menu.home.page_3_2" menu1="main-menu" menu2="main-sec-page_3"/>
-				<nav-entry url="/home/page_3_3.do" auth="allow" label="menu.home.page_3_3" menu1="main-menu" menu2="main-sec-page_3"/>
+			<nav-entry url="/home/page_3.do" auth="page_3" label="menu.home.page_3" menu1="main-menu" menu2="main-sec-page_3">
+				<nav-entry url="/home/page_3_1.do" auth="page_3_1" label="menu.home.page_3_1" menu1="main-menu" menu2="main-sec-page_3"/>
+				<nav-entry url="/home/page_3_2.do" auth="page_3_2" label="menu.home.page_3_2" menu1="main-menu" menu2="main-sec-page_3"/>
+				<nav-entry url="/home/page_3_3.do" auth="page_3_3" label="menu.home.page_3_3" menu1="main-menu" menu2="main-sec-page_3"/>
 			</nav-entry>								
+			<!--
+			<nav-entry url="/WEB-INF/jsp/common/include/error.jsp" auth="allow" label="menu.home.index" menu1="main-empty" menu2="main-empty"/>
+			-->
 		</nav-entry>
 
 	</nav-entry-list>
