@@ -1,0 +1,33 @@
+body {
+	background-color: black;
+	color: #00ff00;
+	font-family: monospace;
+	border: 0px;
+	margin: 0px;'
+}
+
+div.container {
+	margin: 5px;
+	padding: 5px;
+	border: 1px solid #00ff00;
+}
+
+div#menu1 {
+	
+}
+
+div#menu2 {
+	
+}
+
+div#header {
+	
+}
+
+div#footer {
+	
+}
+
+div#content {
+	
+}

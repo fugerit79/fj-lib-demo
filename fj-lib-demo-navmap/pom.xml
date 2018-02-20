@@ -1,0 +1,78 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>fj-lib-demo-navmap</artifactId>
+	<packaging>war</packaging>
+
+	<parent>
+		<groupId>org.fugerit.java</groupId>
+		<artifactId>fj-lib-demo</artifactId>
+		<version>0.1.0</version>
+	</parent>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>org.fugerit.java</groupId>
+			<artifactId>fj-core</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.fugerit.java</groupId>
+			<artifactId>fj-ext</artifactId>
+		</dependency>		
+
+		<dependency>
+		    <groupId>javax</groupId>
+		    <artifactId>javaee-api</artifactId>
+		</dependency>
+
+	</dependencies>
+
+
+	<build>
+	
+		<finalName>fj-lib-demo-navmap-${project.version}</finalName>
+		<outputDirectory>${project.basedir}\src\main\webapp\WEB-INF\classes</outputDirectory>
+		<testOutputDirectory>${project.basedir}\src\main\webapp\WEB-INF\classes</testOutputDirectory>
+		
+		<plugins>
+		
+			<plugin>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.6</version>
+				<configuration>
+					<failOnMissingWebXml>false</failOnMissingWebXml>
+					<archive>
+						<manifest>
+							<addClasspath>true</addClasspath>
+							<classpathLayoutType>custom</classpathLayoutType>
+							<customClasspathLayout>${artifact.artifactId}.${artifact.extension}</customClasspathLayout>
+						</manifest>
+						<manifestEntries>
+							<Implementation-Version>${project.version}</Implementation-Version>
+						</manifestEntries>
+					</archive>
+				</configuration>
+			</plugin>
+		
+		      <plugin>
+			    <groupId>org.eclipse.jetty</groupId>
+			    <artifactId>jetty-maven-plugin</artifactId>
+			    <version>9.4.8.v20171121</version>
+		        <configuration>
+		          <scanIntervalSeconds>10</scanIntervalSeconds>
+		          <connectors>
+		            <connector implementation="org.mortbay.jetty.nio.SelectChannelConnector">
+		              <port>8080</port>
+		              <maxIdleTime>60000</maxIdleTime>
+		            </connector>
+		          </connectors>
+		        </configuration>
+		      </plugin>		
+			
+		</plugins>
+		
+	</build>
+
+</project>

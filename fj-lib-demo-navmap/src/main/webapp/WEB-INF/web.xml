@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" 
+	metadata-complete="true"
+	version="3.0">
+	
+	<!--
+		*****************************************************************************
+		* descrittore dell'applicazione                                             *
+		*****************************************************************************
+		* INFO: vedi /WEB-INF/nav-map.xml per una descrizione completa dei passi    *
+		*       necessari a creare una nuova pagina.                                *
+		*****************************************************************************
+		* metadata-complete -> previene annotation scanning	(faster startup)        *
+		*****************************************************************************
+	 -->
+	
+	<display-name>fj-lib-demo-navmap</display-name>
+
+<!-- 	
+	
+	<filter-mapping>
+		<filter-name>NavFilter</filter-name>
+		<url-pattern>*.do</url-pattern>
+	</filter-mapping>
+	
+ 
+ 	<servlet>
+        <servlet-name>action</servlet-name>
+        <servlet-class>org.fugerit.java.ext.web.navmap.servlet.Struts1ActionServlet</servlet-class>
+        <init-param>
+            <param-name>config</param-name>
+            <param-value>/WEB-INF/struts/struts-config.xml</param-value>
+        </init-param>
+        <init-param>
+            <param-name>config/home</param-name>
+            <param-value>/WEB-INF/struts/struts-home-config.xml</param-value>
+        </init-param>
+        <init-param>
+            <param-name>config/consultazione</param-name>
+            <param-value>/WEB-INF/struts/struts-consultazione-config.xml</param-value>
+        </init-param>      
+        <init-param>
+            <param-name>config/estrazione</param-name>
+            <param-value>/WEB-INF/struts/struts-estrazione-config.xml</param-value>
+        </init-param>             
+        <init-param>
+        	<param-name>definitions-config</param-name>
+            <param-value>/WEB-INF/struts/tiles-defs.xml</param-value>
+        </init-param>
+          <init-param>
+        	<param-name>chainConfig</param-name>
+            <param-value>org/apache/struts/tiles/chain-config.xml</param-value>
+        </init-param>
+        <load-on-startup>2</load-on-startup>
+    </servlet>
+   
+    <servlet-mapping>
+        <servlet-name>action</servlet-name>
+        <url-pattern>*.do</url-pattern>
+    </servlet-mapping>			    
+  
+	
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+	
+	<error-page>
+		<exception-type>java.lang.Exception</exception-type>
+        <location>/fail</location>
+  	</error-page>
+	<error-page>
+		<error-code>500</error-code>
+		<location>/fail</location>
+	</error-page>	
+	<error-page>
+		<error-code>403</error-code>
+		<location>/fail</location>
+	</error-page>
+	<error-page>
+		<error-code>404</error-code>
+		<location>/fail</location>
+	</error-page>
+	
+	<jsp-config>
+	    <taglib>
+	       <taglib-uri>/struts/html</taglib-uri>
+	       <taglib-location>/WEB-INF/tld/struts-html.tld</taglib-location>
+	    </taglib>
+		<taglib>
+		  <taglib-uri>/struts/bean</taglib-uri>
+		  <taglib-location>/WEB-INF/tld/struts-bean.tld</taglib-location> 
+		</taglib>
+		<taglib>
+		  <taglib-uri>/struts/logic</taglib-uri>
+		  <taglib-location>/WEB-INF/tld/struts-logic.tld</taglib-location> 
+		</taglib>
+	 	<taglib>
+		  <taglib-uri>/struts/nested</taglib-uri>
+		  <taglib-location>/WEB-INF/tld/struts-nested.tld</taglib-location> 
+		</taglib>
+	    <taglib>
+		  <taglib-uri>/struts/tiles</taglib-uri>
+		  <taglib-location>/WEB-INF/tld/struts-tiles.tld</taglib-location> 
+		</taglib>
+	    <taglib>
+		  <taglib-uri>/fugerit/navmap</taglib-uri>
+		  <taglib-location>/WEB-INF/tld/navmap.tld</taglib-location> 
+		</taglib>		
+	</jsp-config>	
+	
+ -->	
+	
+</web-app>

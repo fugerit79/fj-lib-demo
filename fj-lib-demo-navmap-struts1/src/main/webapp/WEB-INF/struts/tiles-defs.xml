@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+       "http://struts.apache.org/dtds/tiles-config_1_1.dtd">
+
+<!--
+	*****************************************************************************
+	* tiles-config for default module                                           *
+	*****************************************************************************
+	* INFO: look WEB-INF/nav-map.xml for flow configuration                     *
+	*****************************************************************************
+ -->
+<tiles-definitions>
+
+	<definition name="demo.common.template" path="/WEB-INF/jsp/common/template.jsp">
+		<put name="content" value="/WEB-INF/jsp/common/include/blank.jsp"/>	
+	</definition>
+
+</tiles-definitions>

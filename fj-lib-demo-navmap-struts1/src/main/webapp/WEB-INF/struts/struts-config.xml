@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+"http://struts.apache.org/dtds/struts-config_1_3.dtd">
+
+<!--
+	*****************************************************************************
+	* struts-config for default module                                          *
+	*****************************************************************************
+	* INFO: look WEB-INF/nav-map.xml for flow configuration                     *
+	*****************************************************************************
+ -->
+<struts-config>
+
+	<form-beans>
+	</form-beans>
+	
+	<global-exceptions>
+	</global-exceptions>
+	    
+	<global-forwards>
+	</global-forwards>
+	
+	<action-mappings>	
+		
+	</action-mappings>
+	
+	<message-resources parameter="org.fugerit.java.demo.struts.res.menu" key="menu"/>	
+	<message-resources parameter="org.fugerit.java.demo.struts.res.common" />
+	
+	<plug-in className="org.apache.struts.tiles.TilesPlugin">
+		<set-property property="definitions-config" value="/WEB-INF/struts/tiles-defs.xml" />
+		<set-property property="moduleAware" value="true" />
+		<set-property property="definitions-debug" value="2" />
+		<set-property property="definitions-parser-details" value="2" />
+		<set-property property="definitions-parser-validate" value="true" />
+	</plug-in>
+
+</struts-config>
