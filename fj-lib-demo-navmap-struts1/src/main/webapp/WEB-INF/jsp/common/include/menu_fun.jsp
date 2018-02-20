@@ -17,7 +17,7 @@
 						<c:when test="${authCheck ne '0'}"><i><bean:message key="${menuItem.label}"  bundle="menu"/></i></c:when>
 						<c:when test="${currentBranchCheck}"><bean:message key="${menuItem.label}"  bundle="menu"/></c:when>
 						<c:otherwise>
-							<a class="menu1link" href="${menuItem.url}"><bean:message key="${menuItem.label}"  bundle="menu"/></a>
+							<a class="menu1link" href="${pageContext.request.contextPath}${menuItem.url}"><bean:message key="${menuItem.label}"  bundle="menu"/></a>
 						</c:otherwise>
 					</c:choose>
 				</span> |

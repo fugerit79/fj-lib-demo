@@ -1,5 +1,8 @@
 package org.fugerit.java.demo.navmap.struts.home.action;
 
+import java.util.Arrays;
+import java.util.Collection;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -12,11 +15,15 @@ import org.fugerit.java.core.web.auth.model.AuthUserUtil;
 import org.fugerit.java.core.web.navmap.model.NavMap;
 import org.fugerit.java.core.web.navmap.servlet.NavFacade;
 import org.fugerit.java.demo.navmap.struts.StrutsConstants;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class IndexAction extends Action {
 
+	private static final Logger logger= LoggerFactory.getLogger(IndexAction.class);
+	
 	private static String[] USERS = {
-		"admim", "profile_1", "profile_2", "profile_3", 
+		"admin", "profile_1", "profile_2", "profile_3", 
 	};
 	
 	@Override
@@ -27,10 +34,13 @@ public class IndexAction extends Action {
 			userType = "1";
 		}
 		String type = USERS[ Integer.parseInt( userType ) ];
-		AuthUser user = new AuthUser( type , type );
+		AuthUser user = new AuthUser( userType , type );
 		NavMap map = NavFacade.getNavMapFromContext( this.getServlet() );
-		user.getAuthList().addAll( map.getAuthMap().getDataList( type ) );
+		Collection<String> authList = map.getAuthMap().getDataList( type );
+		logger.info( "user type : "+type+" - auth:"+authList );
+		user.getAuthList().addAll( authList );
 		AuthUserUtil.putUserInSession( user , request );
+		request.setAttribute( "USERS" , Arrays.asList( USERS ) );
 		return StrutsConstants.findForward( mapping , forwardName );
 	}
 	
