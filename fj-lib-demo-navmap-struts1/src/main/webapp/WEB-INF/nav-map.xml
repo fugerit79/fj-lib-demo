@@ -17,19 +17,19 @@
 		</nav-menu>		
 
 		<nav-menu id="main-sec-page_1">
-			<menu-item url="/home/page_1_2.do"/>
+			<menu-item url="/home/page_1_1.do"/>
 			<menu-item url="/home/page_1_2.do"/>
 			<menu-item url="/home/page_1_3.do"/>		
 		</nav-menu>				
 
 		<nav-menu id="main-sec-page_2">
-			<menu-item url="/home/page_2_2.do"/>
+			<menu-item url="/home/page_2_1.do"/>
 			<menu-item url="/home/page_2_2.do"/>
 			<menu-item url="/home/page_2_3.do"/>		
 		</nav-menu>				
 		
 		<nav-menu id="main-sec-page_3">
-			<menu-item url="/home/page_3_2.do"/>
+			<menu-item url="/home/page_3_1.do"/>
 			<menu-item url="/home/page_3_2.do"/>
 			<menu-item url="/home/page_3_3.do"/>		
 		</nav-menu>								

@@ -25,20 +25,23 @@
 		<div class="container" id="header">
 			<h3>${pageTitle}</h3>
 		</div>
-		<c:if test="${navMenu1 != null && fn:length(navMenu1.entries) > 0}">
+		<!-- main menu -->
+		<c:set var="navMenuFun" scope="request" value="${navMenu1}"/>
+		<jsp:include page="/WEB-INF/jsp/common/include/menu_fun.jsp"/>
+		<!-- sec menu -->
+		<c:set var="navMenuFun" scope="request" value="${navMenu2}"/>
+		<jsp:include page="/WEB-INF/jsp/common/include/menu_fun.jsp"/>
+		<!-- breadcrumb -->
 		<div class="container" id="menu1">
-			<c:forEach items="${navMenu1.entries}" var="menu1item">
-				<span class="menu1item"><bean:message key="${menu1item.label}"  bundle="menu"/></span>
-			</c:forEach>
+			<bean:message key="menu.page.breadcrumb" bundle="menu" /> 
+				<c:forEach items="${CurrentNavData.basicBreadCrumb}" var="bcItem">
+					<c:choose>
+						<c:when test="${bcItem.last}"><bean:message key="${bcItem.label}" bundle="menu" /></c:when>
+						<c:otherwise><a href="${pageContext.request.contextPath}${bcItem.url}"><bean:message key="${bcItem.label}" bundle="menu" /></a> - </c:otherwise>
+						</c:choose>
+					</c:forEach>
 		</div>
-		</c:if>
-		<c:if test="${navMenu2 != null && fn:length(navMenu2.entries) > 0}">
-		<div class="container" id="menu2">
-			<c:forEach items="${navMenu2.entries}" var="menu2item">
-				<span class="menu2item"><bean:message key="${menu1item.label}"  bundle="menu"/></span>
-			</c:forEach>
-		</div>				
-		</c:if>
+		<!-- page content -->
 		<div class="container" id="content">
 			<tiles:get name="content" />
 		</div>

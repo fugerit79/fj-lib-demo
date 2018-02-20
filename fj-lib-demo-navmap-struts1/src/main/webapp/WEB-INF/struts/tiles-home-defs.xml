@@ -15,5 +15,53 @@
 	<definition extends="demo.common.template" name="demo.home.index">
 		<put name="content" value="/WEB-INF/jsp/home/content/index.jsp"/>	
 	</definition>
+	
+	<definition extends="demo.common.template" name="demo.home.page_1">
+		<put name="content" value="/WEB-INF/jsp/home/content/page_1.jsp"/>	
+	</definition>	
+	
+	<definition extends="demo.common.template" name="demo.home.page_1_1">
+		<put name="content" value="/WEB-INF/jsp/home/content/page_1_1.jsp"/>	
+	</definition>		
+	
+	<definition extends="demo.common.template" name="demo.home.page_1_2">
+		<put name="content" value="/WEB-INF/jsp/home/content/page_1_2.jsp"/>	
+	</definition>		
+	
+	<definition extends="demo.common.template" name="demo.home.page_1_3">
+		<put name="content" value="/WEB-INF/jsp/home/content/page_1_3.jsp"/>	
+	</definition>		
+	
+	<definition extends="demo.common.template" name="demo.home.page_2">
+		<put name="content" value="/WEB-INF/jsp/home/content/page_2.jsp"/>	
+	</definition>	
+	
+	<definition extends="demo.common.template" name="demo.home.page_2_1">
+		<put name="content" value="/WEB-INF/jsp/home/content/page_2_1.jsp"/>	
+	</definition>		
+	
+	<definition extends="demo.common.template" name="demo.home.page_2_2">
+		<put name="content" value="/WEB-INF/jsp/home/content/page_2_2.jsp"/>	
+	</definition>		
+	
+	<definition extends="demo.common.template" name="demo.home.page_2_3">
+		<put name="content" value="/WEB-INF/jsp/home/content/page_2_3.jsp"/>	
+	</definition>		
+			
+	<definition extends="demo.common.template" name="demo.home.page_3">
+		<put name="content" value="/WEB-INF/jsp/home/content/page_3.jsp"/>	
+	</definition>	
+	
+	<definition extends="demo.common.template" name="demo.home.page_3_1">
+		<put name="content" value="/WEB-INF/jsp/home/content/page_3_1.jsp"/>	
+	</definition>		
+	
+	<definition extends="demo.common.template" name="demo.home.page_3_2">
+		<put name="content" value="/WEB-INF/jsp/home/content/page_3_2.jsp"/>	
+	</definition>		
+	
+	<definition extends="demo.common.template" name="demo.home.page_3_3">
+		<put name="content" value="/WEB-INF/jsp/home/content/page_3_3.jsp"/>	
+	</definition>				
 
 </tiles-definitions>

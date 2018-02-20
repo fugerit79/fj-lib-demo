@@ -26,10 +26,56 @@
 		<action path="/index" 
 				type="org.fugerit.java.demo.navmap.struts.home.action.IndexAction" 
 				validate="false">
-				
 			<forward name="success" path="demo.home.index"/>
 		</action>	
 
+		<action path="/page_1" 
+				forward="demo.home.page_1"
+				validate="false"/>				
+
+		<action path="/page_1_1" 
+				forward="demo.home.page_1_1"
+				validate="false"/>		
+				
+		<action path="/page_1_2" 
+				forward="demo.home.page_1_2"
+				validate="false"/>		
+				
+		<action path="/page_1_3" 
+				forward="demo.home.page_1_3"
+				validate="false"/>						
+				
+		<action path="/page_2" 
+				forward="demo.home.page_2"
+				validate="false"/>				
+
+		<action path="/page_2_1" 
+				forward="demo.home.page_2_1"
+				validate="false"/>		
+				
+		<action path="/page_2_2" 
+				forward="demo.home.page_2_2"
+				validate="false"/>		
+				
+		<action path="/page_2_3" 
+				forward="demo.home.page_2_3"
+				validate="false"/>																										
+	
+		<action path="/page_3" 
+				forward="demo.home.page_3"
+				validate="false"/>				
+
+		<action path="/page_3_1" 
+				forward="demo.home.page_3_1"
+				validate="false"/>		
+				
+		<action path="/page_3_2" 
+				forward="demo.home.page_3_2"
+				validate="false"/>		
+				
+		<action path="/page_3_3" 
+				forward="demo.home.page_3_3"
+				validate="false"/>			
 	
 	</action-mappings>
 				
