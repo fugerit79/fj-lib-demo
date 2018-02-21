@@ -59,33 +59,26 @@
 	
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>
-		<welcome-file>index.htm</welcome-file>
 		<welcome-file>index.jsp</welcome-file>
-		<welcome-file>default.html</welcome-file>
-		<welcome-file>default.htm</welcome-file>
-		<welcome-file>default.jsp</welcome-file>
 	</welcome-file-list>
 
 	<error-page>
-		<exception-type>java.lang.Exception</exception-type>
+		<eerror-code>java.lang.Exception</eerror-code>
+        <location>/WEB-INF/jsp/common/error.jsp</location>
+  	</error-page>
+	<error-page>
+		<eerror-code>403</eerror-code>
+        <location>/WEB-INF/jsp/common/error.jsp</location>
+  	</error-page>
+	<error-page>
+		<eerror-code>404</eerror-code>
+        <location>/WEB-INF/jsp/common/error.jsp</location>
+  	</error-page>
+	<error-page>
+		<eerror-code>500</eerror-code>
         <location>/WEB-INF/jsp/common/error.jsp</location>
   	</error-page>
 
-<!-- 	
-	<error-page>
-		<error-code>500</error-code>
-		<location>/fail</location>
-	</error-page>	
-	<error-page>
-		<error-code>403</error-code>
-		<location>/fail</location>
-	</error-page>
-	<error-page>
-		<error-code>404</error-code>
-		<location>/fail</location>
-	</error-page>
- -->
- 	
 	<jsp-config>
 	    <taglib>
 	       <taglib-uri>/struts/html</taglib-uri>

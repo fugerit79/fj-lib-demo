@@ -28,19 +28,8 @@
 		<auth id="page_3_3"/>
 	</auth-list>
 	
-	<auth-list id="admin">
-		<auth id="page_1"/>
-		<auth id="page_2"/>
-		<auth id="page_3"/>
-		<auth id="page_1_1"/>
-		<auth id="page_1_2"/>
-		<auth id="page_1_3"/>
-		<auth id="page_2_1"/>
-		<auth id="page_2_2"/>
-		<auth id="page_2_3"/>		
-		<auth id="page_3_1"/>
-		<auth id="page_3_2"/>
-		<auth id="page_3_3"/>		
+	<auth-list id="admin" extends="profile_1,profile_2,profile_3">
+	
 	</auth-list>			
 
 </auth-map>
