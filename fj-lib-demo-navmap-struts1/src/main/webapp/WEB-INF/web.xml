@@ -63,20 +63,19 @@
 	</welcome-file-list>
 
 	<error-page>
-		<eerror-code>java.lang.Exception</eerror-code>
-        <location>/WEB-INF/jsp/common/error.jsp</location>
+        <location>/WEB-INF/jsp/error/error.jsp</location>
   	</error-page>
 	<error-page>
-		<eerror-code>403</eerror-code>
-        <location>/WEB-INF/jsp/common/error.jsp</location>
+		<error-code>403</error-code>
+        <location>/WEB-INF/jsp/error/403.jsp</location>
   	</error-page>
 	<error-page>
-		<eerror-code>404</eerror-code>
-        <location>/WEB-INF/jsp/common/error.jsp</location>
+		<error-code>404</error-code>
+        <location>/WEB-INF/jsp/error/404.jsp</location>
   	</error-page>
 	<error-page>
-		<eerror-code>500</eerror-code>
-        <location>/WEB-INF/jsp/common/error.jsp</location>
+		<error-code>500</error-code>
+        <location>/WEB-INF/jsp/error/500.jsp</location>
   	</error-page>
 
 	<jsp-config>

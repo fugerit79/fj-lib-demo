@@ -1,4 +1,3 @@
-<%@ page isErrorPage="true" %>
 <%@ taglib uri="/struts/tiles" prefix="tiles"%>
 <%@ taglib uri="/struts/bean" prefix="bean"%>
 <%@ taglib uri="/struts/logic" prefix="logic"%>
