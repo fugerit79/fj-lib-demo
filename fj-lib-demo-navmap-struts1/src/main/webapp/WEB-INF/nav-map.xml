@@ -12,6 +12,7 @@
 			<menu-item url="/home/page_1.do"/>
 			<menu-item url="/home/page_2.do"/>
 			<menu-item url="/home/page_3.do"/>
+			<menu-item url="/home/page_4.do"/>
 		</nav-menu>
 		
 		<nav-menu id="main-empty">
@@ -38,6 +39,12 @@
 			<menu-item url="/home/page_3_3.do"/>		
 		</nav-menu>								
 
+		<nav-menu id="main-sec-page_4">
+			<menu-item url="/home/page_4_1.do"/>
+			<menu-item url="/home/page_4_2.do"/>
+			<menu-item url="/home/page_4_3.do"/>		
+		</nav-menu>		
+
 	</nav-menu-list>
 	
 	<nav-entry-list>
@@ -59,7 +66,12 @@
 				<nav-entry url="/home/page_3_1.do" auth="page_3_1" label="menu.home.page_3_1" menu1="main-menu" menu2="main-sec-page_3"/>
 				<nav-entry url="/home/page_3_2.do" auth="page_3_2" label="menu.home.page_3_2" menu1="main-menu" menu2="main-sec-page_3"/>
 				<nav-entry url="/home/page_3_3.do" auth="page_3_3" label="menu.home.page_3_3" menu1="main-menu" menu2="main-sec-page_3"/>
-			</nav-entry>								
+			</nav-entry>		
+			<nav-entry url="/home/page_4.do" auth="page_4_1,page_4_2,page_4_3" label="menu.home.page_4" menu1="main-menu" menu2="main-sec-page_4">
+				<nav-entry url="/home/page_4_1.do" auth="page_4_1" label="menu.home.page_4_1" menu1="main-menu" menu2="main-sec-page_4"/>
+				<nav-entry url="/home/page_4_2.do" auth="page_4_2" label="menu.home.page_4_2" menu1="main-menu" menu2="main-sec-page_4"/>
+				<nav-entry url="/home/page_4_3.do" auth="page_4_3" label="menu.home.page_4_3" menu1="main-menu" menu2="main-sec-page_4"/>
+			</nav-entry>						
 			<!--
 			<nav-entry url="/WEB-INF/jsp/common/include/error.jsp" auth="allow" label="menu.home.index" menu1="main-empty" menu2="main-empty"/>
 			-->

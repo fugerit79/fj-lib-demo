@@ -18,9 +18,12 @@ public class CustomAuthHandler extends BasicAuthHandler {
 		} else {
 			AuthUser user = AuthUserUtil.lookForUser( request );
 			if ( user != null ) {
-				if ( user.getAuthList().contains( resource ) ) {
-					status = AUTH_AUTHORIZED;
-				}
+				String[] res = resource.split( "," );
+				for ( int k=0; k<res.length; k++ ) {
+					if ( user.getAuthList().contains( res [k] ) ) {
+						status = AUTH_AUTHORIZED;
+					}
+				}				
 			}
 		}
 		return status;

@@ -77,6 +77,22 @@
 				forward="demo.home.page_3_3"
 				validate="false"/>			
 	
+		<action path="/page_4" 
+				type="org.fugerit.java.ext.web.navmap.struts.action.ForwardFirstOnMenu2Action"
+				validate="false"/>		
+	
+		<action path="/page_4_1" 
+				forward="demo.home.page_4_1"
+				validate="false"/>		
+				
+		<action path="/page_4_2" 
+				forward="demo.home.page_4_2"
+				validate="false"/>		
+				
+		<action path="/page_4_3" 
+				forward="demo.home.page_4_3"
+				validate="false"/>	
+	
 	</action-mappings>
 				
 	<message-resources parameter="org.fugerit.java.demo.struts.res.home" key="home"/>	

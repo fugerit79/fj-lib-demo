@@ -64,4 +64,16 @@
 		<put name="content" value="/WEB-INF/jsp/home/content/page_3_3.jsp"/>	
 	</definition>				
 
+	<definition extends="demo.common.template" name="demo.home.page_4_1">
+		<put name="content" value="/WEB-INF/jsp/home/content/page_4_1.jsp"/>	
+	</definition>		
+	
+	<definition extends="demo.common.template" name="demo.home.page_4_2">
+		<put name="content" value="/WEB-INF/jsp/home/content/page_4_2.jsp"/>	
+	</definition>		
+	
+	<definition extends="demo.common.template" name="demo.home.page_4_3">
+		<put name="content" value="/WEB-INF/jsp/home/content/page_4_3.jsp"/>	
+	</definition>	
+
 </tiles-definitions>
