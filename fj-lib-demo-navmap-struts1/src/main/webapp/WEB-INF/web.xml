@@ -16,6 +16,12 @@
 	<display-name>fj-lib-demo-navmap-struts1</display-name>
 	
 	<filter>
+		<display-name>SessionStatusFilter</display-name>
+		<filter-name>SessionStatusFilter</filter-name>
+		<filter-class>org.fugerit.java.core.web.servlet.request.filter.SessionStatusFilter</filter-class>
+	</filter>
+	
+	<filter>
 		<display-name>NavFilter</display-name>
 		<filter-name>NavFilter</filter-name>
 		<filter-class>org.fugerit.java.core.web.navmap.servlet.NavFilter</filter-class>
@@ -24,6 +30,11 @@
 			<param-value>/WEB-INF/nav-map.xml</param-value>
 		</init-param>
 	</filter>
+
+	<filter-mapping>
+		<filter-name>SessionStatusFilter</filter-name>
+		<url-pattern>*.do</url-pattern>
+	</filter-mapping>
 
 	<filter-mapping>
 		<filter-name>NavFilter</filter-name>
